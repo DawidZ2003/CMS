@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="60" viewBox="0 0 600 60" xmlns="http://www.w3.org/2000/svg">
+
+  <style>
+
+    /* animowany gradient tekstu */
+    .text {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        fill: url(#grad);
+        animation: pulse 3s ease-in-out infinite;
+    }
+
+    .subtext {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        font-size: 13px;
+        fill: #64748b;
+        animation: colorShift 5s ease-in-out infinite;
+    }
+
+    /* delikatne pulsowanie */
+    @keyframes pulse {
+        0%   { transform: scale(1); }
+        50%  { transform: scale(1.03); }
+        100% { transform: scale(1); }
+    }
+
+    /* zmiana koloru sloganu */
+    @keyframes colorShift {
+        0%   { fill: #16a34a; }
+        25%  { fill: #22c55e; }
+        50%  { fill: #0ea5e9; }
+        75%  { fill: #f59e0b; }
+        100% { fill: #16a34a; }
+    }
+
+  </style>
+
+  <!-- gradient -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#16a34a">
+        <animate attributeName="stop-color"
+                 values="#16a34a;#22c55e;#0ea5e9;#f59e0b;#16a34a"
+                 dur="6s"
+                 repeatCount="indefinite"/>
+      </stop>
+
+      <stop offset="100%" stop-color="#22c55e">
+        <animate attributeName="stop-color"
+                 values="#22c55e;#0ea5e9;#f59e0b;#16a34a;#22c55e"
+                 dur="6s"
+                 repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+  </defs>
+
+  <!-- t艂o -->
+  <rect width="600" height="60" fill="white"/>
+
+  <!-- nazwa -->
+  <text x="20" y="38" class="text">
+    FRESH MARKET
+  </text>
+
+  <!-- slogan -->
+  <text x="20" y="55" class="subtext">
+    produkty spożywcze prosto od lokalnych dostawców
+  </text>
+
+</svg>
